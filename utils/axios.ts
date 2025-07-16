@@ -2,7 +2,7 @@ import axios from "axios";
 import { toast } from "sonner";
 
 export const appAxios = axios.create({
-      baseURL: "",
+      baseURL: "https://687769d4dba809d901ef34eb.mockapi.io/",
       headers: {
             "Content-Type": "application/json",
       },
