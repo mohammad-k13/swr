@@ -17,7 +17,7 @@ export function useAppSWR<T = any, B = Record<string, any>>({
 }: IUseAppSWR<T, B>) {
       const fetcher = async (args: readonly [string, B]): Promise<T> => {
             const [_url, body] = args;
-            return await swrFetcher<B, T>({ url: _url, body, method, asQueryParams });
+            return swrFetcher<B, T>({ url: _url, body, method, asQueryParams });
           };
 
       return useSWR<T>(key, fetcher, swrOptions);
